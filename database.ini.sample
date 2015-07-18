@@ -1,0 +1,15 @@
+[MOODLE2]
+adapter = pgsql
+host = server.domain.com
+dbname = moodle2
+port = 5432
+username = user
+password = 'password'
+
+; Oracle example
+[PEOPLESOFT]
+adapter = oci
+dbname = '//server.domain.com:1521/test.domain.com'
+username = user
+password = 'password'
+

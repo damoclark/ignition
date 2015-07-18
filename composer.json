@@ -1,0 +1,29 @@
+{
+		"name": "mylms-tools/ignition",
+		"description": "The ignition library provides a very simple framework for initialising (or igniting) an Apache PHP controller script or command line script for execution.",
+		"keywords": [
+			"framework","apache","commandline","smarty","propel","composer"
+		],
+		"homepage": "https://github.com/damoclark/ignition",
+		"license": "GPL-3.0",
+		"authors": [
+			{
+				"name": "Damien Clark",
+				"email": "damo.clarky@gmail.com",
+				"homepage": "http://damos.world",
+				"role": "Developer"
+			}
+		],
+		"support": {
+			"email": "damo.clarky@gmail.com",
+		},
+    "repositories": [
+        {
+            "type": "pear",
+            "url": "http://pear.php.net"
+        }
+    ],
+    "require": {
+	"pear-pear.php.net/Config": "1.10.12"
+    }
+}

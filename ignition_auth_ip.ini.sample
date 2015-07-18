@@ -1,0 +1,49 @@
+; This is a sample auth_ip configuration file showing the different syntax supported
+
+; The order of the network is significant.
+; The first match to a rule will return
+
+[rules]
+; Allow requests from IP subnet 192.168.1.0 - 192.168.1.255
+ip_filter = "192.168.1.0/24"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[rules]
+; Allow requests from IP subnets 192.168.1.0 and 192.168.2.0
+ip_filter = "192.168.1/24, 192.168.2.0/24"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[rules]
+; Allow requests from IP subnets 192.168.1.0 and 192.168.2.0
+ip_filter = "192.168.1.0-192.168.2.255"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[rules]
+; Allow requests from IP subnets 192.168.1.0 and 192.168.2.0
+ip_filter[] = "192.168.1.*"
+ip_filter[] = "192.168.2.*"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[rules]
+; Allow requests from IP subnet 192.168.1.0 except 192.168.1.53
+; Note, the negative match must come before the positive match
+ip_filter[] = "! 192.168.1.53"
+ip_filter[] = "192.168.1.0/24"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[rules]
+; The previous rule written another way
+ip_filter = "! 192.168.1.53,192.168.1.0/24"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[rules]
+; Don't allow any connections
+ip_filter = "! *.*.*.*"
+
