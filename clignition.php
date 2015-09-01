@@ -359,7 +359,7 @@ class clignition extends ignition
 	 * @param string $username     Username to authenticate
 	 * @param string $password     Password is ignored
 	 */
-	public function authenticate($username,$password)
+	public function authenticate($username=null,$password=null)
 	{
 		//Now that our INCLUDE_PATH is set, let's get about doing some authentication
 		if($this->getenv('DEBUG')) error_log('Including ignition_auth_none.php ') ;
