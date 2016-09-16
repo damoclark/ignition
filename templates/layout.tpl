@@ -9,11 +9,7 @@
 	
 			{block name=meta}
 				<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-				<meta name="apple-mobile-web-app-capable" content="yes" />    
 				<meta name="robots" content="noindex,nofollow,noarchive"/>
-				{if $userAgent=="phone"}
-					<meta name="viewport" content="width=480;" />
-				{/if}
 						
 			{/block}
 			
@@ -30,9 +26,6 @@
 			</title>
 	
 			{block name=headerCSS}
-				<link type="text/css" href="{$themelib}/jquery-ui-1.8.11.custom.css" rel="stylesheet" />	
-				<link type="text/css" href="{$themelib}/layout.css" rel="stylesheet" />	
-				<link type="text/css" href="{$themelib}/formatting.css" rel="stylesheet" />	
 				{assign var='headerCSS' value=$headerCSS|default:''} {* Set default headerCSS to nothing *}
 				{foreach $headerCSS as $css}
 					{$css}
@@ -40,9 +33,6 @@
 			{/block}
 			
 			{block name=headerJS}
-				<script type="text/javascript" src="{$themelib}/jquery-latest.js"></script>
-				<script type="text/javascript" src="{$themelib}/jquery-ui-latest.js"></script>    
-				<script type="text/javascript" src="{$themelib}/ajax-exception-handler.js"></script>
 				{assign var='headerJS' value=$headerJS|default:''} {* Set default headerJS to nothing *}
 				{foreach $headerJS as $js}
 					{$js}
