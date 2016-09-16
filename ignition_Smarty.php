@@ -18,7 +18,6 @@ class ignition_Smarty extends Smarty
    */
   function __construct()
   {
-    //date_default_timezone_set('Australia/Queensland') ;
     parent::__construct() ;
 
 		//This change will allow templates to be included within a block section of
